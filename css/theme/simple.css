@@ -49,7 +49,7 @@ body {
   text-shadow: none; }
 
 .blue {color:#00A9B4;}
-.green {color: #92BB44;}
+.green {color: #f5b84e;}
 .orange {color: #EDAB23;}
 .left {float: left;}
 .right {float: right;}
@@ -64,7 +64,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #f05b62;
+  color: #309fdf;
   font-family: "Gotham-Round", Impact, sans-serif;
   font-weight: 300;
   line-height: 0.9em;
@@ -72,14 +72,14 @@ body {
   text-transform: none;
   text-shadow: none; }
 
-.reveal section[data-background="#f05b62"] h2, .reveal section[data-background="#f05b62"] h1 {color: #fafafa;}
+.reveal section[data-background="#309fdf"] h2, .reveal section[data-background="#309fdf"] h1 {color: #fafafa;}
 .reveal h1 {margin: 0 0 30px;}
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color:  #f05b62;
+  color:  #309fdf;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -88,7 +88,7 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #0000f1;
+  color: #09405f;
   text-shadow: none;
   border: none; }
 
@@ -113,7 +113,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color:  #f05b62;
+  border-color:  #309fdf;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -121,20 +121,20 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color:  #f05b62; }
+  border-right-color:  #4c98c3; }
 
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color:  #f05b62; }
+  border-left-color:  #4c98c3; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color:  #f05b62; }
+  border-bottom-color:  #4c98c3; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color:  #f05b62; }
+  border-top-color:  #4c98c3 }
 
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #53555C; }
@@ -155,7 +155,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background:  #f05b62;
+  background:  #09405f;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -165,14 +165,14 @@ body {
 
   .reveal footer{
     position: fixed;
-    height: 26px;
+    height: 75px;
     width: 100%;
     bottom: 3px;
     left: 0;
     z-index: 10; 
     font-size: 35%;
     text-align:left;
-    background-image: url(../images/pink-logo.png);
+    background-image: url(../images/logo-small.png);
     background-repeat: no-repeat;
     background-size: auto 74%;
     background-position: 7px 0;
@@ -184,4 +184,4 @@ body {
 .reveal footer .copyright a img{
     vertical-align: middle;
 }
-.reveal footer span {color: #f05b62;}
+.reveal footer span {color: #09405f;}
