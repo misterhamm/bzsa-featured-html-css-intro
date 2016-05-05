@@ -4,14 +4,15 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Class 1 ~ HTML/CSS ~ Girl Develop It</title>
+    <title>Class 1 ~ HTML/CSS ~ BizStream Academy</title>
 
     <meta name="description" content="This is curriculum for the GDI RDU intro to web series. It was developed from the official Girl Develop It Core HTML/CSS curriculum">
     <meta name="author" content="Girl Develop It">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
+    
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
     <link rel="stylesheet" href="css/custom.css">
@@ -86,13 +87,13 @@
     <section>
       <h3>What is HTML?</h3>
       <p>HTML is the code that allows us to build websites</p>
-      <img src = "img/homepage-view.png" alt="Screenshot of the Girl Develop It Homepage">
+      <img src = "img/homepage-view.png" alt="Screenshot of the BizStream Academy Homepage">
     </section>
 
     <section>
       <h3>What is HTML?</h3>
       <p>If you 'view the source', you see this</p>
-      <img src = "img/homepage-html.png" alt="Screenshot of the Girl Develop It page source code">
+      <img src = "img/homepage-html.png" alt="Screenshot of the Bizstream Academy page source code">
     </section>
 
     <!-- History of HTML-->
@@ -151,7 +152,7 @@
         Firefox - Firebug</li>
         <li><strong>Text Editor</strong><br />
         <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a> - Windows, Mac, Linux<br />
-        <a href="http://brackets.io/" target="_blank">[] Brackets</a> - Windows, Mac<br />
+        <a href="http://brackets.io/" target="_blank">[ ] Brackets</a> - Windows, Mac<br />
         <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a> - Windows<br />
         <a href="http://www.atom.io/" target="_blank">Atom</a> - Windows, Mac<br />
         <a href="http://www.barebones.com/products/textwrangler/TextWrangler" target="_blank">TextWrangler</a> - Mac</li>
@@ -282,9 +283,9 @@
             <li>Value is the value assigned to a given attribute.</li>
             <li>Values must be contained inside quotation marks.</li>
             <li>
-<pre><code class ="html">&lt;div id="copyright"&gt;&copy;Girl Develop It logo 2016&lt;/div&gt;
+<pre><code class ="html">&lt;div id="copyright"&gt;&copy;BizStream Academy logo 2016&lt;/div&gt;
 &lt;img src="my_picture.jpg" /&gt;
-&lt;a href="http://girldevelopit.com"&gt;Girl Develop It&lt;/a&gt;
+&lt;a href="http://www.bizstreamacademy.com"&gt;BizStream Academy&lt;/a&gt;
 </code></pre>
             </li>
           </ul>
@@ -302,7 +303,7 @@ www.w3.org/TR/html4/loose.dtd"&gt;
 </code></pre>
 <pre><code class = "html">&lt;!DOCTYPE html&gt;
 </code></pre>
-      <p><small>* The doctype is case-insensitive. <br/>DOCtype, doctype, DocType and DoCtYpe are all valid.</small></p>
+      <p><small>* The doctype is case-insensitive. <br/>DOCtype, doctype, DocType and DoCtYpe are all valid <br/>(although that last one is pretty weird).</small></p>
     </section>
 
     <section>
@@ -462,7 +463,7 @@ Here is a paragraph with &lt;em&gt;emphasized&lt;/em&gt; text and &lt;strong&gt;
 
     <!--develop it!-->
     <section >
-      <h3>Let's Develop it!</h3>
+      <h3>Enough Talk: Let's Code!</h3>
       <p class="left-align">Let's add some content to our site!</p>
       <p class="left-align">Add one of each level of heading with 1-2 short paragraphs of text below each heading. </p>
       <p class="left-align">Use &lt;strong&gt; and &lt;em&gt; within a few paragraphs.</p>
@@ -474,12 +475,12 @@ Here is a paragraph with &lt;em&gt;emphasized&lt;/em&gt; text and &lt;strong&gt;
       <p>Links have three components</p>
       <ul>
         <li>Tag: &lt;a>&lt;/a></li>
-        <li>Href attribute: "http://www.girldevelopit.com"</li>
-        <li>Title attribute: "Girl Develop It"</li>
+        <li>Href attribute: "http://www.bizstreamacademy.com"</li>
+        <li>Title attribute: "BizStream Academy"</li>
       </ul>
-<pre><code class="html">&lt;a href="http://www.girldevelopit.com" title="Girl Develop It"&gt;Girl Develop It&lt;/a&gt;<
+<pre><code class="html">&lt;a href="http://www.bizstreamacademy.com" title="BizStream Academy"&gt;BizStream Academy&lt;/a&gt;<
 </code></pre>
-      <p><a href ="http://www.girldevelopit.com" title="Girl Develop It">Girl Develop It</a></p>
+      <p><a href ="http://www.bizstreamacademy.com" title="BizStream Academy">BizStream Academy</a></p>
       <p>The &lt;a&gt; tag surrounds text or images to turn them into links</p>
     </section>
 
@@ -491,7 +492,7 @@ Here is a paragraph with &lt;em&gt;emphasized&lt;/em&gt; text and &lt;strong&gt;
 </code></pre>
       <p><small>Link opens in a new window/tab with <strong>target="_blank"</strong></small></p>
       <!-- Change email to fit your chapter's needs-->
-<pre><code class="html">&lt;a href="mailto:sponsorships@girldevelopit.com"&gt;E-mail us!&lt;/a&gt;
+<pre><code class="html">&lt;a href="mailto:sponsorships@bizstream.com"&gt;E-mail us!&lt;/a&gt;
 </code></pre>
       <p><small>Adding <strong>mailto:</strong> directly before the email address means the link will open in the default email program.</small></p>
     </section>
@@ -509,7 +510,7 @@ Here is a paragraph with &lt;em&gt;emphasized&lt;/em&gt; text and &lt;strong&gt;
         </li>
         <li><strong>Absolute</strong><br />
         <ul>
-          <li>Absolute paths refer to a specific location of a file, including the domain. <small><code>"http://www.girldevelopit.com/chapters/detroit"</code></small></li>
+          <li>Absolute paths refer to a specific location of a file, including the domain. <small><code>"http://www.bizstreamacademy.com/returning"</code></small></li>
           <li>Typically used when pointing to a link that is not within your own domain.</li>
         </ul>
         </li>
@@ -518,7 +519,7 @@ Here is a paragraph with &lt;em&gt;emphasized&lt;/em&gt; text and &lt;strong&gt;
 
     <!-- Lets develop it-->
     <section>
-      <h3>Let's Develop It</h3>
+      <h3>Enough Talk: Let's Code!</h3>
       <p>Let's add links to our site!</p>
       <p>Add links that open in the same window, a new window and link to an e-mail address.</p>
     </section>
@@ -530,11 +531,11 @@ Here is a paragraph with &lt;em&gt;emphasized&lt;/em&gt; text and &lt;strong&gt;
       <p>Images have three components</p>
       <ul>
         <li>Tag: &lt;img /&gt;</li>
-        <li>Src attribute: "https://assets.brandfolder.com/4btx26fz/original/circle-gdi-logo.png"</li>
-        <li>Alt attribute: "Girl Develop It logo"</li>
+        <li>Src attribute: "https://raw.githubusercontent.com/misterhamm/bzsa-featured-html-css-intro/master/img/bzs-academy-logo-2015.png"</li>
+        <li>Alt attribute: "BizStream Academy logo"</li>
       </ul>
-<pre><code class="html">&lt;img src="https://assets.brandfolder.com/4btx26fz/original/circle-gdi-logo.png"
-alt="Girl Develop It logo"/&gt;
+<pre><code class="html">&lt;img src="https://raw.githubusercontent.com/misterhamm/bzsa-featured-html-css-intro/master/img/bzs-academy-logo-2015.png"
+alt="BizStream Academy Logo"/&gt;
 </code></pre>
       <p><small>* Notice: This tag is our first example of a stand-alone or "self-closing" element.</small></p>
     </section>
@@ -566,7 +567,7 @@ Above us only sky
 
     <!-- Develop it! -->
     <section>
-      <h3>Let's Develop It!</h3>
+      <h3>Enough Talk: Let's Code!</h3>
       <p>Let's add some images and line breaks to our page.</p>
       <p>We can even turn our images into links.</p>
     </section>
@@ -613,7 +614,7 @@ Above us only sky
 
     <!-- Develop it!-->
     <section>
-      <h3>Let's Develop it!</h3>
+      <h3>Enough Talk: Let's Code!</h3>
       <p>Let's add one of each ordered and unordered lists to our page.</p>
       <p>We can make a list of links or even a list of images!</p>
     </section>
@@ -700,7 +701,7 @@ Above us only sky
     </section>
 
     <section>
-      <h2>Questions?</h2>
+      <img src="/img/questions.jpg" alt="">
     </section>
 </div><!-- Close slides -->
 

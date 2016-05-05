@@ -38,7 +38,7 @@ body {
   background-color: white; }
 
 .reveal {
-  font-family: "Gotham-Round", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 36px;
   font-weight: 300;
   color: #53555C; }
@@ -65,7 +65,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #309fdf;
-  font-family: "Gotham-Round", Impact, sans-serif;
+  font-family: "Source Sans Pro", Impact, sans-serif;
   font-weight: 300;
   line-height: 0.9em;
   letter-spacing: 0.02em;
