@@ -1,0 +1,31 @@
+﻿// 3rd Party styles
+@import "plugins/bootstrap.min.css";
+
+// Base styles that normalize and create
+// structure for development to build on
+@import "base/_normalize.scss";
+
+// Variables and Mixins for use throughout development
+@import "base/_variables.scss";
+@import "base/_mixins.scss";
+
+// Global styles that determine site wide
+// looks. Should only contain element tags
+// and very high level classes
+@import "base/_global.scss";
+
+
+// Module styles
+
+// -- Header Modules
+@import "modules/header/_header.scss";
+
+// -- Footer Modules
+@import "modules/footer/_footer.scss";
+@import "modules/footer/_footer-resources.scss";
+
+// -- Layout Modules
+@import "modules/layout/_main-content.scss";
+@import "modules/layout/_sidebar.scss";
+
+// -- UI-Element Modules

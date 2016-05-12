@@ -1,0 +1,18 @@
+﻿
+.footer-references {
+    background: $references-bg;
+    color: white;
+    padding: 20px 0;
+
+    h2, a {
+        color: white;
+    }
+
+    h2 {
+        margin: 0 0 15px;
+    }
+
+    a {
+        border-bottom: 1px solid white;
+    }
+}

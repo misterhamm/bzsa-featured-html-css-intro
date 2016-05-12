@@ -1,0 +1,36 @@
+﻿
+.main-content {
+    background: white;
+    padding: 40px 15px;  
+
+    h2 {
+        @include fontSize(34px);
+        margin: 35px 0 15px;
+    }
+
+    ol {
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.class-assignment {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+
+//Media Queries
+@media (min-width: $breakpoint-small) {
+    .main-content {
+        padding: 80px 50px;
+        width: 72%;
+        min-height: 780px;
+    }
+}

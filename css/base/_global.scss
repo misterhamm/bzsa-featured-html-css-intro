@@ -1,0 +1,224 @@
+﻿
+html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    width: 100%;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    @include body;
+    line-height: 1.6;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+    border-bottom: 1px solid $link;
+
+    &:hover {
+        color: $link-hover;
+        text-decoration: none;
+    }
+}
+
+a:active, a:focus {
+    color: $link;
+    text-decoration: none;
+    outline: none;
+    ie-dummy: expression(this.hideFocus=true);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img, object, embed, audio, video {
+    max-width: 100%;
+}
+
+i, em, .italic {
+    font-style: italic;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+
+hr {
+    border-color: $bg-stroke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 1.5em;
+}
+
+h1 {
+    @include fontSize(30px);
+}
+
+h2 {
+    @include fontSize(27px);
+}
+
+h3 {
+    @include fontSize(24px);
+}
+
+h4 {
+    @include fontSize(20px);
+}
+
+h5 {
+    @include fontSize(18px);
+}
+
+.clear {
+    clear: both;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    border: 0;
+}
+
+textarea:focus, input:focus {
+    outline: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    outline: 0;
+    background-color: $primary;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    height: 36px;
+    padding: 5px 30px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+    outline: none;
+    background-color: $primary;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+select {
+    color: $body;
+    border: 0;
+    height: 36px;
+    line-height: 36px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    @include fontSize(16px);
+    padding: 0 0 0 10px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input:disabled{
+    background: grey;
+    border-top-width: 1px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    color: $body;
+}
+
+//IE fix, scroll bar overlaps content
+@-ms-viewport {
+    width: auto !important;
+}

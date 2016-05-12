@@ -1,0 +1,57 @@
+﻿
+.sidebar {
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            color: $body;
+            width: 100%;
+            height: 70px;
+            line-height: 70px;
+
+            a, span {
+                padding-left: 25px;
+            }
+
+            span {
+                display: block;
+                @include fontSize(19px);
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            a {
+                display: block;
+                border: 0;
+                color: $primary;
+                line-height: 70px;
+
+                &.active {
+                    background: white;
+                }
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.72);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.sidebar-container {
+    padding: 0;
+}
+
+
+//Media Queries
+@media (min-width: $breakpoint-small) {
+    .sidebar-container {
+        width: 28%;
+    }
+}

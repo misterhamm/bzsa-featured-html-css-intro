@@ -1,0 +1,23 @@
+﻿
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,700,700italic);
+
+// Mobile-First
+$breakpoint-large: 1150px; // large desktop and above
+$breakpoint-medium: 970px; // narrow desktop and above
+$breakpoint-small: 750px; // tablet and above
+
+// Colors
+$primary: #09405f;
+$primary-hover: #073048;
+$link: #0380A1;
+$link-hover: #09405f;
+
+//Backgrounds
+$bg-stroke: #e1e1e1;
+$footer-bg: #1a1a1a;
+$references-bg: #0380A1;
+$body-bg: #F5F5F5;
+
+//Text
+$body: #333;
+$heading: #09405f;

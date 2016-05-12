@@ -1,0 +1,36 @@
+﻿
+//calculare rem size and include px
+@function calculateRem( $size ) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize( $size ) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin body {
+    color: #333333;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    @include fontSize(17px);
+    background: $body-bg;
+}
+
+@mixin clear-fix {
+    &:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+}
+
+@mixin align-middle {
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

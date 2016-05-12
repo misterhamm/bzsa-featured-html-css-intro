@@ -1,0 +1,64 @@
+﻿
+header {
+    background: $primary;
+    overflow: visible;
+
+    .container {
+        position: relative;
+    }
+
+    h1 {
+        color: white;
+        margin: 14px 0;
+        padding-left: 10px;
+        display: inline-block;
+        margin-right: 100px;
+    }
+
+    .logo {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        z-index: 99;
+
+        a {
+            border: 0;
+        }
+
+        img {
+            width: 80px;
+        }
+    }
+
+    .questions {
+        z-index: 999;
+        display: none;
+        float: right;
+        margin-top: 20px;
+        color: white;
+        border-bottom-color: white;
+    }
+}
+
+
+//Media Queries
+@media (min-width: $breakpoint-medium) {
+    header {
+
+        .logo {
+            position: absolute;
+            top: 11px;
+            left: 50%;
+            right: auto;
+            margin-left: -60px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .questions {
+            display: block;
+        }
+    }
+}

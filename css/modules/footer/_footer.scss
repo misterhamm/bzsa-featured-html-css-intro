@@ -1,0 +1,15 @@
+﻿
+#footer {
+    background: $footer-bg;
+    color: white;
+    padding: 10px 0;
+    @include fontSize(14px);
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        border-bottom: 1px solid white;
+    }
+}
