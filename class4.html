@@ -107,9 +107,14 @@
           <ul>
             <li>CSS divides HTML into two types: inline and block.</li>
             <li>After block elements, browsers render a new line.</li>
-            <li><strong>Inline elements:</strong> img, a, br, em, strong</li>
+            <li><strong>Inline elements:</strong> img, a, br, em, strong, span</li>
             <li><strong>Block elements:</strong> p, h1, ul, li, almost everything else</li>
           </ul>
+          <div style="margin-top: 120px;">
+             <small>For a full list of block-level elements <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">click here</a></small>
+             <br>
+              <small style="display:block;">For a full list of inline elements <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">click here</a></small>
+          </div>
         </section>
 
         <!-- Divs -->
@@ -193,7 +198,7 @@
            <p>Create a header, content area, sidebar, and a footer.</p>
         </section>
 
-        <section>
+        <!-- <section>
           <h3>Sample Code</h3>
            <p>A page divided into divs might look like this:</p>
 <pre><code class="html">&lt;!doctype html&gt;
@@ -217,7 +222,7 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-        </section>
+        </section> -->
 
         <section>
           <h3>Sample Code: HTML5</h3>
@@ -425,7 +430,7 @@ width: 300px;
         <section>
           <h3>Wrappers</h3>
           <p>Wrappers are a good way to center content if the screen width is wider than your content.</p>
-<pre><code class="css">div.wrapper{
+<pre><code class="css">.wrapper{
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -446,10 +451,10 @@ width: 300px;
           <h3>Property: Width</h3>
           <p>Sets the width of an element.</p>
           <p>Does not include padding or borders. Remember to add these to the width.</p>
-<pre><code class="css">div#sidebar{
+<pre><code class="css">#sidebar{
   width: 31%;
   padding: 1%;
-  border: none; //Total width is 33%
+  border: none; /* Total width is 33% */
 }
 </code></pre>
         </section>
@@ -462,7 +467,7 @@ width: 300px;
 <pre><code class="css">p.alert{
   height: 50px;
   padding: 5px;
-  border: 2px solid red; //Total height is 64px
+  border: 2px solid red; /* What is the total height of the element? */
 }
 </code></pre>
         </section>
@@ -477,6 +482,7 @@ width: 300px;
         </section>
 
         <section>
+         <h1>Questions?</h1>
           <img src="img/Monkey_Has_A_Question.jpg" alt="">
         </section>
 </div><!-- Close slides -->
