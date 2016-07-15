@@ -1,0 +1,369 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Introduction to jQuery - Part 1</title>
+
+    <meta name="description" content="This is an introduction to jQuery for BizStream Academy, developed by Stephanie Hofman and Alli Treman.
+
+		It is based on the JavaScript for Beginners content via Girl Develop It.">
+    <meta name="author" content="BizStream Academy">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor-->
+    <link rel="stylesheet" href="lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="lib/css/dark.css"> -->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="img/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Opening slide -->
+            <section>
+                <img src="img/logo_transparent.png" alt="BZSA Logo" class="noborder">
+                <h3>jQuery/Web Development Advanced</h3>
+                <h2>Section 2</h2>
+            </section>
+
+
+            <section>
+                <h3>jQuery Review</h3>
+                <p>What code should you always wrap your jQuery in?</p>
+				<div class="fragment blue">
+                <pre><code>
+$(document).ready(function(event){
+  // jQuery code goes in here
+});
+				</code></pre>
+				</div>
+            </section>
+
+            <section>
+				<h3>Updating CSS Styles with jQuery</h3>
+                <p>The .css() method can handle any CSS changes in jQuery.</p>
+				<pre>
+				<code>
+$('h1').css('font-size', '30px');
+
+$('#header').css({
+	height: '300px',
+	background: '#333'
+});
+				</code>
+				</pre>
+				<p>The first line of code above shows you how to update a single CSS property, in this case we're updating the h1 tag and changing the font-size to 30px.</p>
+				<p>The second section shows you how to update multiple CSS properties at once.</p>
+			</section>
+
+			<section>
+				<h3>Enough Talk: Let's Code!</h3>
+				<p>Using the .css() method, update the CSS of an element.</p>
+			</section>
+
+            <section>
+                <h3>Onclick Function</h3>
+                <p>One of the most commonly used events is the click event.
+				The click event is a method that gets triggered whenever someone clicks on the HTML element that is declared at the beginning of the click event method.</p>
+                <pre><code>
+HTML:
+&lt;button&gt;Click here to reveal the text&lt;/button&gt;
+&lt;p class="superhero-weakness"&gt;
+Your secret text here
+&lt;/p&gt;
+
+CSS:
+.superhero-weakness {
+    display: none;
+}
+                </code></pre>
+                <p>
+                    Add the above code to your HTML
+                </p>
+            </section>
+
+            <section>
+                <h3>Adding the Onclick Event</h3>
+                <pre><code>
+$('button').click(function(event){
+  $('.superhero-weakness').css('display', 'block');
+});
+		      </code></pre>
+			  <p>In the above jQuery, we are creating an event that will go off whenever someone clicks on a button HTML element. When they click on it, this method will go after the element with
+			   a CLASS of superhero-weakness and change it from display none to block.
+			  </p>
+            </section>
+
+            <section>
+				<h3>Enough Talk: Let's Code!</h3>
+				<p>Use a click event to change the css of text from display none to display block.</p>
+				<img src="img/click-mouse.jpg" />
+			</section>
+
+            <section>
+                <h3>Let's create a menu!</h3>
+                <p>
+                    Go to <a href="http://www.bizstreamacademy.com">http://www.bizstreamacademy.com</a> and go to the Resources page.
+                </p>
+                <p>
+                    At the bottom of the page, click on the about.html and contact.html student pages. Then right click on the page and chooose "Save as...".
+                    In the "save as type" section, choose "webpage, HTML only".
+                </p>
+                <p>
+                    Save those 2 files to your project folder.
+                </p>
+            </section>
+
+            <section>
+                <h3>Menu HTML</h3>
+                <p>Add the following HTML inside or below your header HTML:</p>
+                <pre>
+                <code>
+&lt;nav id="menu"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="about.html"&gt;About&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>Let's style that menu!</h3>
+<pre><code style="max-height: 500px;">#menu {
+    float: right;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    float: left;
+}
+
+#menu ul li a {
+    display: block;
+    font-size: 20px;
+    padding-left: 35px;
+    line-height: 65px;
+}</code></pre>
+            </section>
+            <section>
+                <h3>Enough Talk: Let's Code!</h3>
+                <p>
+                    Take the next 5 minutes to work on your about or contact page. Or ask us any questions about how to edit the menu!
+                </p>
+            </section>
+
+            <section>
+                <h3>What is a Media Query?</h3>
+                <p>A media query is a way of specifying certain CSS at different screen widths.</p>
+<pre><code>
+@media only screen and (max-width: 750px) {
+    body {
+        background-color: blue;
+    }
+}
+</code></pre>
+                <p>
+                    The above code states "If the browser/device window is smaller than 750px, then the background color will change to blue."
+                </p>
+                <p>
+                    Add the above code to the very bottom of your
+                    style.css file.
+                </p>
+            </section>
+
+            <section>
+                <h3>Testing on "mobile" device</h3>
+                <img src="img/mobile-dev-tools.png" />
+            </section>
+
+            <section>
+                <h3>Changing Menu Styles on Mobile</h3>
+                <p>
+                    Inside the media query that you just added, add the following CSS:
+                </p>
+<pre><code>
+#menu ul li {
+    float: none;
+}
+
+#menu ul li a {
+    padding: 0;
+    line-height: 30px;
+    text-align: right;
+}
+</code></pre>
+            </section>
+
+            <section>
+                <h3>What's a hamburger menu?</h3>
+                <p>A hamburger menu is simply 3 bars in a row from top to bottom. It is an icon that has become know to show a site's menu when you click on it.</p>
+                <img src="img/cat-hamburger.png" />
+            </section>
+
+            <section>
+                <h3>Download your hamburger menu icon</h3>
+                <p>
+                    Go to <a href="http://www.bizstreamacademy.com">http://www.bizstreamacademy.com</a> and go to the Resources page.
+                </p>
+                <p>
+                    At the bottom of the page, click on the menu-icon-white.png OR menu-icon-black.png. If you have a dark colored background, choose white, otherwise choose black.
+                    Then right click on the image and chooose "Save as...".
+                </p>
+                <p>
+                    Save that file to your project folder.
+                </p>
+            </section>
+
+            <section>
+                <h3>Hamburger menu HTML</h3>
+                <p>Add the following code to your HTML, above your menu HTML</p>
+                <pre><code>
+&lt;div class="toggle-menu"&gt;
+    &lt;img src="menu-icon-white.png" /&gt;
+&lt;/div&gt;
+							</code></pre>
+            </section>
+
+            <section>
+                <h3>Hamburger menu only on mobile?</h3>
+                <p>Right now the hamburger menu is always there, but we really only want to see it on mobile.</p>
+                <p>
+                    Add the following CSS OUTSIDE your mobile media query (so put it above it):
+                </p>
+                <pre><code>
+.toggle-menu {
+    display: none;
+}
+</code></pre>
+            </section>
+
+            <section>
+                <h3>Active menu icon and hide menu</h3>
+                <p>Now that the mobile menu icon is hidden on desktop, we need to display it on mobile and hide the menu itself.</p>
+                <p>
+                    Add the following CSS INSIDE your mobile media query:
+                </p>
+                <pre><code>
+.toggle-menu {
+    display: block;
+    float: right;
+    margin-top: 30px;
+}
+
+#menu {
+    display: none;
+}
+</code></pre>
+            </section>
+
+            <section>
+                <h3>But the icon does nothing?</h3>
+                <h4>If only we had a way to do SOMETHING on click?!</h4>
+                <p>Any guesses?</p>
+                <img src="img/question.jpg" />
+            </section>
+            <section>
+                <h3>Toggling the Menu</h3>
+                <p>The following code will execute when you click on the div with class toggle-menu. Then it will toggle the menu on and off.</p>
+                <pre><code>
+$('.toggle-menu').click(function() {
+    $('#menu').slideToggle();
+});
+</code></pre>
+
+            </section>
+            <section>
+                <h3>Enough Talk: Let's Code!</h3>
+                <p>Want to style your mobile menu more? Or style something else for your mobile view? Maybe change a column width to 100%?</p>
+            </section>
+
+            <section>
+                <h3>Questions?</h3>
+                <img src="img/questioncat-no.png" />
+            </section>
+        </div><!-- Close .slides -->
+        <footer>
+            <!-- <div class="copyright">
+              HTML/CSS ~ Girl Develop It
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+            </div>-->
+        </footer>
+    </div><!-- Close .reveal -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+              { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+              { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+              { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+              { src: 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+              { src: 'plugin/zoom-js/zoom.js', async: true },
+              { src: 'plugin/notes/notes.js', async: true },
+                        { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>
