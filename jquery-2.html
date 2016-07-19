@@ -117,19 +117,22 @@ CSS:
 
             <section>
                 <h3>Adding the Onclick Event</h3>
+                <p>
+                    In the below jQuery, we are creating an event that will go off whenever someone clicks on a button HTML element.
+                </p>
                 <pre><code>
 $('button').click(function(event){
   $('.superhero-weakness').css('display', 'block');
 });
 		      </code></pre>
-			  <p>In the above jQuery, we are creating an event that will go off whenever someone clicks on a button HTML element. When they click on it, this method will go after the element with
+			  <p>When they click on it, this method will go after the element with
 			   a CLASS of superhero-weakness and change it from display none to block.
 			  </p>
             </section>
 
             <section>
 				<h3>Enough Talk: Let's Code!</h3>
-				<p>Use a click event to change the css of text from display none to display block.</p>
+				<p>Use the button click event to change the text color of an HTML element.</p>
 				<img src="img/click-mouse.jpg" />
 			</section>
 
@@ -212,9 +215,32 @@ $('button').click(function(event){
                 <p>
                     The above code states "If the browser/device window is smaller than 750px, then the background color will change to blue."
                 </p>
+            </section>
+
+            <section>
+                <h3>Creating a mobile style sheet</h3>
+                <p>To keep things simple, we'll be separating out our mobile styles in a new stylesheet.</p>
                 <p>
-                    Add the above code to the very bottom of your
-                    style.css file.
+                    In your HTML head, below where your style.css is declared, paste in this HTML:
+                </p>
+<pre><code>&lt;link href="mobile.css" type="text/css" rel="stylesheet"&gt;
+</code></pre>
+                <p>
+                    Then create a new file called mobile.css in your project folder.
+                </p>
+            </section>
+
+            <section>
+                <h3>Adding mobile styles</h3>
+                <p>In your newly created mobile.css file, add the following css:</p>
+<pre><code>@media only screen and (max-width: 750px) {
+    body {
+        background-color: blue;
+    }
+}
+</code></pre>
+                <p>
+                    Resize your browser to see how your background color changes on a small screen.
                 </p>
             </section>
 
@@ -226,7 +252,7 @@ $('button').click(function(event){
             <section>
                 <h3>Changing Menu Styles on Mobile</h3>
                 <p>
-                    Inside the media query that you just added, add the following CSS:
+                    Inside your mobile.css file, add the following CSS:
                 </p>
 <pre><code>
 #menu ul li {
@@ -243,7 +269,7 @@ $('button').click(function(event){
 
             <section>
                 <h3>What's a hamburger menu?</h3>
-                <p>A hamburger menu is simply 3 bars in a row from top to bottom. It is an icon that has become know to show a site's menu when you click on it.</p>
+                <p>A hamburger menu is simply 3 bars in a row from top to bottom. It is an icon that has become known to show a site's menu when you click on it.</p>
                 <img src="img/cat-hamburger.png" />
             </section>
 
@@ -275,7 +301,7 @@ $('button').click(function(event){
                 <h3>Hamburger menu only on mobile?</h3>
                 <p>Right now the hamburger menu is always there, but we really only want to see it on mobile.</p>
                 <p>
-                    Add the following CSS OUTSIDE your mobile media query (so put it above it):
+                    Add the following CSS to your style.css file.
                 </p>
                 <pre><code>
 .toggle-menu {
@@ -288,7 +314,7 @@ $('button').click(function(event){
                 <h3>Active menu icon and hide menu</h3>
                 <p>Now that the mobile menu icon is hidden on desktop, we need to display it on mobile and hide the menu itself.</p>
                 <p>
-                    Add the following CSS INSIDE your mobile media query:
+                    Add the following CSS to your mobile.css file:
                 </p>
                 <pre><code>
 .toggle-menu {
@@ -305,7 +331,7 @@ $('button').click(function(event){
 
             <section>
                 <h3>But the icon does nothing?</h3>
-                <h4>If only we had a way to do SOMETHING on click?!</h4>
+                <h4>If only we had a way to do SOMETHING to get the menu to appear?!</h4>
                 <p>Any guesses?</p>
                 <img src="img/question.jpg" />
             </section>
