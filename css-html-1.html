@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
   <head>
@@ -540,7 +540,7 @@ alt="BizStream Academy Logo"/&gt;
     </section>
 
     <!-- Line Break-->
-    <section>
+    <!--<section>
     <h3>Element: Line Break</h3>
       <div>
         <div class="halfblock">
@@ -563,11 +563,12 @@ Above us only sky
         <div class ="clear"></div>
       </div>
     </section>
+  --!>
 
     <!-- Develop it! -->
     <section>
       <h3>Enough Talk: Let's Code!</h3>
-      <p>Let's add some images and line breaks to our page.</p>
+      <p>Let's add a few images to our page.</p>
       <p>We can even turn our images into links.</p>
     </section>
 
@@ -618,28 +619,9 @@ Above us only sky
       <p>We can make a list of links or even a list of images!</p>
     </section>
 
-    <!--Comments-->
-    <section>
-      <h3>Comments</h3>
-      <p>You can add comments to your code that will not be seen by the browser, but only visible when viewing the code.</p>
-<pre><code class="html">&lt;!-- Comment goes here --&gt;
-</code></pre>
-    <p><small>Comments can be used to organize your code into sections so you (or someone else) can easily understand your code. It can also be used to 'comment out' large chunks of code to hide it from the browser.</small></p>
-<pre><code class="html">&lt;!-- Beginning of header --&gt;
-&lt;div id="header"&gt;Header Content &lt;/div&gt;
-&lt;!-- End of header --&gt;
-
-&lt;!--
-&lt;ol&gt;
-&lt;li&gt;List Item&lt;/li&gt;
-&lt;li&gt;Another List Item&lt;/li&gt;
-&lt;/ol>
--->
-</code></pre>
-    </section>
 
     <!--Tables-->
-    <section>
+    <!--section>
       <h3>Tables</h3>
       <p>Tables are a way to represent complex information in a grid format.</p>
       <p>Tables are made up of rows and columns.</p>
@@ -671,14 +653,102 @@ Above us only sky
         </div>
         <div class ="clear"></div>
       </div>
-    </section>
+    </!--section>
 
-    <!-- Table Examples -->
     <section>
       <h3>Tables: Examples</h3>
       <p>Tables can be styled with CSS to add zebra striping or to highlight important rows/columns.</p>
       <img src="img/example-tables.png" alt="Example of tables" />
-    </section>
+    </section>-->
+
+  <!-- Divs -->
+   <section>
+            <h3>Element: Div</h3>
+            <ul>
+              <li>Block level element. Each new div is rendered on a new line.</li>
+              <li>A division, or section of content within an HTML page.</li>
+              <li>Used to group elements to format them with CSS.</li>
+              <li>Apply IDs and Classes to divs to control their styles with CSS.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Div Examples</h3>
+  <pre><code class="html">&lt;div&gt;
+     &lt;p&gt;Content&lt;p&gt;
+     &lt;p&gt;Content&lt;p&gt;
+  &lt;/div&gt;
+  </code></pre>
+  <pre><code class="html">&lt;div id="header"&gt;
+     &lt;h1&gt;Main Heading&lt;h1&gt;
+  &lt;/div&gt;
+  </code></pre>
+  <pre><code class="html">&lt;div class="sub-content"&gt;
+     &lt;p&gt;Some more content&lt;p&gt;
+  &lt;/div&gt;
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Grouping elements with div</h3>
+            <ul>
+              <li>The div tag is used everywhere to group elements together into sections.</li>
+              <li>You can wrap groups of elements in a div to style them differently.</li>
+            </ul>
+          </section>
+
+  <!--Comments-->
+  <section>
+    <h3>Comments</h3>
+    <p>You can add comments to your code that will not be seen by the browser, but only visible when viewing the code.</p>
+<pre><code class="html">&lt;!-- Comment goes here --&gt;
+</code></pre>
+    <p><small>Comments can be used to organize your code into sections so you (or someone else) can easily understand your code. It can also be used to 'comment out' large chunks of code to hide it from the browser.</small></p>
+<pre><code class="html">&lt;!-- Beginning of header --&gt;
+&lt;div&gt; Header Content &lt;/div&gt;
+&lt;!-- End of header --&gt;
+&lt;!--
+&lt;ol&gt;
+&lt;li&gt;List Item&lt;/li&gt;
+&lt;li&gt;Another List Item&lt;/li&gt;
+&lt;/ol>
+-->
+</code></pre>
+  </section>
+
+          <!--<section>
+            <h3>Grouping elements with div, cont.</h3>
+  <pre><code class="css">.align-right{
+    text-align:right;
+    color: purple;
+    font-weight: bold;
+  }
+  </code></pre>
+  <pre><code class="html">&lt;div class="align-right"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
+    &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Magna aliqua. Ut enim ad minim veniam.&lt;/p&gt;
+  &lt;p&gt;Quis nostrud exercitation ullamco.&lt;/p&gt;
+  </code></pre>
+            <div style="text-align:right; font-weight:bold; font-size:70%; color:purple;">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            </div>
+            <div style="font-size:70%;">
+              <p>Magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Quis nostrud exercitation ullamco.</p>
+            </div>
+          </section> -->
+
+          <section>
+            <h3>Enough Talk: Let's Code!</h3>
+             <p>Let's add some divs your site to separate content into different sections based off of your wireframe drawings.</p>
+            <p>Then add comments to organize your divs content.</p>
+             <!--<p>Section your content into a header, content area, and a footer, then add comments to organize your divs content.</p>
+             <p>If that goes quickly for you, try adding a sidebar!</p>-->
+          </section> 
+
+
 
     <!-- Character codes-->
     <section>

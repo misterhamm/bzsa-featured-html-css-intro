@@ -56,15 +56,9 @@
         <!-- Quiz 1-->
         <section>
           <h3>Quiz Part 1</h3>
-          <p>Within your &lt;html&gt;&lt;/html&gt; tags, which are the two nested tags required for a website?</p>
+          <p>What are the three parts that make up The CSS Rule?</p>
           <div class="fragment">
-<pre><code class="html xml">&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre><img style="border: none; box-shadow: none; margin: 0 auto; display: block;" alt="The CSS Rule" src="img/cssrule.png"></pre>
 
       </div>
         </section>
@@ -72,9 +66,11 @@
         <!-- Quiz 2-->
         <section>
           <h3>Quiz Part 2</h3>
-          <p class="fragment visible">What does a complete paragraph element look like?</p>
+          <p class="fragment visible">What is the shorthand for the CSS font property?</p>
           <div class="fragment">
-<pre><code class="html xml">&lt;p&gt;This is a paragraph&lt;/p&gt;
+            <pre><code class="css">p {
+  font: style weight font-family;
+}
 </code></pre>
           </div>
         </section>
@@ -82,18 +78,76 @@
         <!-- Quiz 3-->
         <section>
           <h3>Quiz Part 3</h3>
-          <p class="fragment">What does a complete link (anchor) element look like?  Hint: needs an 'href'.</p>
+          <p class="fragment">What does a complete link (anchor) element look like?</p>
           <div class="fragment">
-<pre><code class="html xml">&lt;a href="http://google.com/"&gt;This goes to google&lt;/a&gt;
+<pre><code class="html xml">&lt;a href="http://google.com/" target="_blank" &gt;This goes to google&lt;/a&gt;
 </code></pre>
           </div>
         </section>
+
+      <!-- Review -->
+      <section>
+        <h3>Let's Review</h3>
+        <img src="img/review.jpg" alt="review images" />
+      </section>
+
+        <section>
+          <h3>Grouping elements with div</h3>
+          <ul>
+            <li>The div tag is used everywhere to group elements together into sections.</li>
+            <li>You can wrap groups of elements in a div to style them differently.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>IDs vs. Classes</h3>
+          <p>
+            <strong>ID</strong> -- Should only apply to one element on a webpage, i.e., a webpage only has one footer.
+            <br /> The "#" is how you tell CSS "this is an id."
+          </p>
+          <p>
+            <strong>Class</strong> -- Lots of elements can have the same class, i.e., There can be many warnings on one webpage.
+            <br /> The "." is how you tell CSS "this is a class name."
+          </p>
+        </section> 
+
+        <section>
+          <h3>Grouping elements with div, cont.</h3>
+<pre><code class="css">.align-right{
+  text-align:right;
+  color: purple;
+  font-weight: bold;
+}
+</code></pre>
+<pre><code class="html">&lt;div class="align-right"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
+  &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Magna aliqua. Ut enim ad minim veniam.&lt;/p&gt;
+&lt;p&gt;Quis nostrud exercitation ullamco.&lt;/p&gt;
+</code></pre>
+          <div style="text-align:right; font-weight:bold; font-size:70%; color:purple;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          </div>
+          <div style="font-size:70%;">
+            <p>Magna aliqua. Ut enim ad minim veniam.</p>
+            <p>Quis nostrud exercitation ullamco.</p>
+          </div>
+        </section>
+        <section>
+          <h3>Enough Talk: Let's Code!</h3>
+          <p>Let's add some styling your site specific to each div class in your HTML.</p>
+          <p>Style the content in the header, content area, and footer to have different CSS properties.</p>
+          <p>ex. Change the background color of your header div.</p>
+        </section>
+
 
         <!-- Inline vs. block-->
         <section>
           <h3>Inline vs Block</h3>
           <div class="halfblock">
-            <p>So far, we have mostly seen <strong>"block"</strong> elements. They appear on the next line, like paragraphs.</p>
+            <p>So far, we have mostly seen <strong>"block"</strong> elements. They appear on the next line, like paragraphs and divs.</p>
             <p>There are also <strong>"inline"</strong> elements. They appear on the same line that they are written on.</p>
           </div>
           <div class="halfblock">
@@ -118,7 +172,7 @@
         </section>
 
         <!-- Divs -->
-        <section>
+       <!-- <section>
           <h3>Element: Div</h3>
           <ul>
             <li>Block level element. Each new div is rendered on a new line.</li>
@@ -181,7 +235,7 @@
            <p>Let's add some divs your site to separate content into different sections.</p>
            <p>Section your content into a header, content area, and a footer.</p>
            <p>If that goes quickly for you, try adding a sidebar!</p>
-        </section>
+        </section> -->
 
         <section>
           <h3>HTML5</h3>
@@ -197,7 +251,7 @@
 
         <p>A full list can be found <a href="http://www.tutorialspoint.com/html5/html5_new_tags.htm">here</a>.</p>
         </section>
-
+      <!--
         <section>
           <h3>Enough Talk: Let's Code!</h3>
            <p>Replace your divs with the HTML5 tags:</p>
@@ -207,7 +261,7 @@
                <p>&lt;footer&gt;</p>
                <p>&lt;aside&gt;</p>
            
-        </section>
+        </section> -->
 
         <!-- <section>
           <h3>Sample Code</h3>
@@ -336,9 +390,13 @@ a:active {color:#0000FF;} /* selected link */
         </section>
         <section>
           <h3>Box Model</h3>
-          <img src="img/box-model.png" alt="Graphic illustrating box model"/>
+          <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.</p>
+          <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.</p>
         </section>
+        <section>
+          <img src="img/box-model.png" alt="Graphic illustrating box model" />
 
+        </section>
         <!-- Padding -->
         <section>
           <h3>Padding</h3>
@@ -382,7 +440,7 @@ a:active {color:#0000FF;} /* selected link */
         
         <section>
             <h3>Enough Talk:  Let's Code!</h3>
-            <p>Try adding some padding to your &lt;section&gt; element.</p>
+            <p>Try adding some padding to the div with the class that has your main content.</p>
             <p>Remember: you can write out "padding-left", "padding-right", etc. or you can use shorthand declarations.</p>
         </section>
 
@@ -418,14 +476,14 @@ border-color: #666666;
         
         <section>
             <h3>Enough Talk:  Let's Code!</h3>
-            <p>Try adding a border to your &lt;header&gt; element.</p>
+            <p>Try adding a border to your &lt;header&gt; element as well as some padding.</p>
             <p>Experiment with different border styles, thicknesses, and positions.</p>
         </section>
 
         <!-- Margin -->
         <section>
           <h3>Margin</h3>
-          <p>The transparent area around the box that separates it from other elements.</p>
+          <p>The transparent area around the box that separates it from other elements by creating whitespace. It can be used to horizontally center an element as well.</p>
           <img src="img/box-model-margin.png" alt="Graphic illustrating box model, margin highlighted"/>
         </section>
 
@@ -443,15 +501,10 @@ border-color: #666666;
           <h3>Auto Margin</h3>
           <p>If a margin is set to auto on a box that has width, it will take up as much space as possible.</p>
           <p>CENTERED</p>
-<pre><code class="css">margin: auto;
-width: 300px;
+<pre><code class="css">margin: 0 auto;
+width: 200px;
 </code></pre>
-          <p>TO RIGHT</p>
-<pre><code class="css">margin-left: auto;
-margin-right: 5px;
-width: 300px;
-</code></pre>
-       <small>How far from the right edge would this element be?</small>
+         <div style="width:200px;margin: 40px auto;background-color: teal;color: #fff;padding: 15px;"><p>This box will be centered.</p></div>
         </section>
         
         
@@ -459,9 +512,9 @@ width: 300px;
         <section>
           <h3>Wrappers</h3>
           <p>Wrappers are a good way to center content if the screen width is wider than your content.</p>
-<pre><code class="css">.wrapper{
+<pre><code class="css">.wrapper {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 </code></pre>
@@ -471,8 +524,82 @@ width: 300px;
             <h3>Enough Talk:  Let's Code!</h3>
             <p>Try adding some margin to your &lt;footer&gt; element.</p>
             <p>Notice how margin pushes the footer away from other content but the element stays the same size;</p>
-            <p>Center your entire document in the browser.</p>
+            <p>Then center your entire document in the browser by adding a wrapper class with auto margin, width and a max-width.</p>
         </section>
+
+        <section>
+          <h3>Placing elements side by side</h3>
+          <p>If you want two block level elements to be side by side, you need to float both elements..</p>
+          <div style="border:5px solid black; padding:20px; width:720px; margin:0 auto;">
+            <div style="background-color: #688836; color: white; width:25%; height:160px; float:left;">
+              <p style="padding:15px;">
+                width: 25%;<br />
+                float: left;
+              </p>
+            </div>
+            <div style="background-color: #C3C3C3; width:75%; height:160px; float:left;">
+              <p style="padding:15px">
+                width: 75%;<br />
+                float: left;
+              </p>
+            </div>
+            <br style="clear:both" />
+          </div>
+        </section>
+
+        <section>
+          <h3>Float</h3>
+          <ul>
+            <li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
+            <li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
+            <li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
+            <li>You can specify a) whether an element is floated or not, and b) which side it floats on.</li>
+          </ul>
+        </section>
+      <section>
+        <img src="img/grootbaby.jpg" style="float:left; height: 200px;" />
+        <p>This is a long paragraph text that is next to an image that is floating to the left. This is an image of Baby Groot. Groot was a Flora colossus from Planet X, the capital of the branch worlds. The sapling that would come to be known as "Groot" came from an "Enobled Sap-line" and gifted in quasi-dimensional super-positional engineering...at least, according to Maximus the Mad. Groot did not get along with his fellow saplings, instead preferring the company of the "Maintenance Mammals" who the other saplings treated with prejudice. After Groot killed another sapling to defend a maintenance mammal it was brutalising, as well as releasing a human subject that was kidnapped for scientific purposes, he was exiled of the planet by the "Arbor Masters". With no place to go, Groot set to explore other galaxies.</p>
+      </section>
+        <section>
+          <h3>Clear</h3>
+          <ul>
+            <li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
+            <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <strong>clear: left;</strong> to the paragraph.</li>
+            <li>Clearing both sides makes sure floats don’t flow past the clear element.</li>
+          </ul>
+<pre><code class="css">clear: right;
+clear: left;
+clear: both;
+</code></pre>
+        </section>
+
+      <section>
+        <h3>Clearfix</h3>
+        <p>A clearfix is applied to pseudo-class :after of a div that contains two elements that are floating next to each other.</p>
+        <p>It's generally used in float layouts where elements are floated to be stacked horizontally.</p>
+      </section>
+      <section>
+        <h3>Clearfix CSS</h3>
+       <pre><code>
+         .wrapper:after {
+          content: '';
+          display: table;
+          clear:  both;
+         }
+         </code></pre>
+        <p>Be sure to apply this to the div that is containing your two elements that are floating next to each other.</p>
+
+      </section>
+      <section>
+        <h3>Enough Talk, Lets Code!</h3>
+        <p>Let's float our side bar and content area so they are displayed next to each other.</p>
+        <p>Notice how the footer no longer is displayed correctly. Add a clearfix to your wrapper class that contains the floating divs.</p>
+      </section>
+
+      <section>
+        <h3>Questions?</h3>
+        <img src="img/star-wars-question.jpg" />
+      </section>
        
         <!-- Exercise -->
         <!--<section>
@@ -483,7 +610,7 @@ width: 300px;
 
         <!-- Sizing -->
         <!-- Width-->
-        <section>
+        <!--<section>
           <h3>Property: Width</h3>
           <p>Sets the width of an element.</p>
           <p>Does not include padding or borders. Remember to add these to the width.</p>
@@ -493,10 +620,10 @@ width: 300px;
   border: none; /* Total width is 33% */
 }
 </code></pre>
-        </section>
+        </section> -->
 
         <!-- height-->
-        <section>
+       <!-- <section>
           <h3>Property: Height</h3>
           <p>Sets the height of an element.</p>
           <p>Does not include padding or borders. Remember to add these to the height.</p>
@@ -506,10 +633,10 @@ width: 300px;
   border: 2px solid red; /* What is the total height of the element? */
 }
 </code></pre>
-        </section>
+        </section> --->
 
         <!-- Exercise -->
-        <section>
+        <!--<section>
           <h3>Enough Talk: Let's Code!!</h3>
           <div>
             <p>Add a width &amp; height to an element.</p>
@@ -520,7 +647,7 @@ width: 300px;
         <section>
          <h1>Questions?</h1>
           <img src="img/Monkey_Has_A_Question.jpg" alt="">
-        </section>
+        </section> --->
 </div><!-- Close slides -->
 
     <div>
