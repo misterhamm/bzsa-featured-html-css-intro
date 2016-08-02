@@ -59,39 +59,95 @@
                 <h2>Section 1</h2>
             </section>
 
-
             <section>
                 <h3>What is jQuery?</h3>
-                <p>jQuery is a library that makes writing JavaScript for websites easier and more browser friendly.</p>
-                <p>jQuery is used to make your website more dynamic!</p>
+                <p>jQuery is a JavaScript library that makes writing JavaScript for websites easier and more browser friendly.</p>
+                <p>jQuery is used to make your website more dynamic! Write less, do more.</p>
                 <img src="img/jquery_logo.png" alt="jQuery: Write less, do more" />
             </section>
 
             <section>
-                <h3>Enough Talk: Let's Code!</h3>
-                <h4>Adding the jQuery Library</h4>
+                <h3>How do we add the jQuery library to our site?</h3>
                 <p>Before you can start coding jQuery, the library needs to be added to your site.</p>
-                <p>It should go RIGHT BEFORE your closing body tag.</p>
-                <pre style="width:100%;"><code>
+                <p>It should go in the head section of your HTML. Take a second to add this line of code to your site.</p>
+<pre style="width:100%;"><code>
 &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
-								</code></pre>
+
+</code></pre>
             </section>
+
             <section>
-                <h3>Enough Talk: Let's Code!</h3>
-                <h4>Creating Your JavaScript File</h4>
-                <p>Create a new file in Sublime Text.</p>
-                <p>Save it as <strong>main.js</strong> inside your folder.</p>
-                <p>It should be in the same location as your index.html file.</p>
+                <h3>Document Ready</h3>
+                <p>In order for jQuery to manipulate HTML, it needs to make sure that the HTML is fully loaded before running the jQuery.</p>
+
+<pre><code>
+$(document).ready(function(event){
+    // jQuery code goes in here
+});
+
+</code></pre>
+<p>So whenever you write jQuery, you'll need to wrap that code in a document.ready function, as shown below:</p>
+            </section>
+
+            <section>
+                <h3>$()</h3>
+                <p>$() is a shortcut for jQuery(). The $() is made for selecting an element and then returning that element to perform an action on it.</p>
+                <img src="img/raincat.jpg" alt="make it rain cat" />
+            </section>
+
+            <section>
+                <h3>jQuery Selectors</h3>
+                <p>The following code selects the element that has the ID header in the HTML.</p>
+                <img style="max-width: none;" src="img/jquery-object.jpg" alt="jQuery selector" />
+                <p>
+                    This is how you access HTML elements with jQuery. Once you have the element in the jQuery object, you can do stuff to it.
+                </p>
+            </section>
+
+            <section>
+                <h3>Where do we write our jQuery?</h3>
+                <p>Create a new file in Sublime Text called <strong>main.js</strong>. Save it to your project folder.</p>
                 <img src="img/newjsfile.png" alt="where to put your new js file" />
-            </section>
-            <section>
-                <h3>Enough Talk: Let's Code!</h3>
-                <h4>Add Your JavaScript File to Your Site</h4>
-                <p>Add the following line of code to your index.html file right AFTER the jQuery include and right BEFORE the closing &lt;/body&gt; tag.</p>
+                <p>Add the following line of code to your index.html file right BEFORE the closing &lt;/body&gt; tag.</p>
                 <pre><code>
 &lt;script src="main.js"&gt;&lt;/script&gt;
 							</code></pre>
             </section>
+
+            <section>
+                <h3>Enough Talk: Let's Code!</h3>
+                <h4>In your new main.js file, add the following jQuery:</h4>
+                <pre><code>
+$(document).ready(function(event){
+    $('body').prepend("&lt;p&gt;Test&lt;/p&gt;");
+});
+							</code></pre>
+                            <p>
+                                Feel free to change the body tag to something else, like maybe #footer or change the 'test' text inside the paragraph tags to something else!
+                            </p>
+            </section>
+
+            <section>
+                <h3>Comments</h3>
+                <p>Just like in HTML and CSS, comments are for developers and are not interpreted by the browser.</p>
+                <p>Your code has two sets of comments. They show the two different ways of formatting comments.</p>
+            </section>
+            <section>
+                <h3>Comments</h3>
+                <p>One is to surround the comment by /* on one side and */ on the other. These comments can be multiple lines long.</p>
+                <pre><code>
+            /* This comment
+            is three
+            lines long. */
+                        </code></pre>
+                <p>Two is to have // before the comment. This kind of comment can only be one line long.</p>
+                <pre>
+                <code>
+            // This comment is only one line long.
+                            </code>
+                        </pre>
+            </section>
+
             <section>
                 <h3>jQuery Plugins</h3>
                 <h4>Don't Reinvent the Wheel</h4>
@@ -107,38 +163,33 @@
             <section>
                 <h3>Real world example: Slideshow</h3>
                 <p>Now we're going to step through together how to add a slideshow jQuery plugin.</p>
-                <p>Start by Googling 'Slick Slider' or go to: <a href="http://kenwheeler.github.io/slick" target="_blank">http://kenwheeler.github.io/slick</a></p>
+                <p>Start by Googling 'Owl Slider' or go to: <a href="http://owlgraphic.com/owlcarousel/" target="_blank">http://owlgraphic.com/owlcarousel/</a></p>
             </section>
             <section>
-                <h3>Enough Talk: Let's Code!</h3>
-                <h4>Download Slick Slider</h4>
+                <h3>Download OWL Carousel</h3>
                 <ul>
-                    <li>Click the 'Get it Now' menu item and then click the 'Download Now' button.</li>
-                    <li>Unzip the slick-1.6.0 folder. Then open that folder and go inside the slick folder.</li>
-                    <li>Copy the slick.min.js, slick.css, slick-theme.css, and entire fonts folder, and paste them into your project's folder.</li>
+                    <li>Click the 'Download for FREE' button at the top.</li>
+                    <li>Unzip the owl.carousel folder. Then open that folder and copy the entire owl-carousel folder (not the demos or assets folder).</li>
+                    <li>Then paste it into your project's folder.</li>
+                    <img src="img/owl-screenshot.png" alt="owl slider screenshot" />
                 </ul>
-            </section>
-            <section>
-                <h3>Here's What Your Folder Should Look Like</h3>
-                <img src="img/newslickfiles.png" alt="folder structure with new slick files" />
-                <p>Plus any images you might have.</p>
             </section>
             <section>
                 <h3>Enough Talk: Let's Code!</h3>
                 <h4>Add the file references to your HTML</h4>
                 <p>In the head tag section of your HTML, add these 2 stylesheets:</p>
                 <pre>
-                <code>
-&lt;link rel="stylesheet" type="text/css" href="slick.css" /&gt;
-&lt;link rel="stylesheet" type="text/css" href="slick-theme.css" /&gt;
-							</code>
-							</pre>
+<code>
+&lt;link rel="stylesheet" type="text/css" href="owl-carousel/owl.carousel.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="owl-carousel/owl.theme.css" /&gt;
+
+</code></pre>
                 <p>AFTER your jQuery script tag, but BEFORE your main.js script tag, add the following:</p>
                 <pre>
-                <code>
-&lt;script src="slick.min.js"&gt;&lt;/script&gt;
-							</code>
-							</pre>
+<code>
+&lt;script src="owl-carousel/owl.carousel.min.js"&gt;&lt;/script&gt;
+
+</code></pre>
             </section>
             <section>
                 <h3>Enough Talk: Let's Code!</h3>
@@ -169,87 +220,40 @@
                 <h3>Initialize your jQuery slider</h3>
                 <p>In your main.js file, add the following code: </p>
                 <pre>
-                <code class="javascript">
+<code class="javascript">
 /* Get The Document Ready! */
 $(document).ready(function(event){
-	// Slick Slider
-	$('.slideshow').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		speed: 300,
-		autoplay: true,
-		fade: true,
-		cssEase: 'linear'
-	});
+
+    // Owl Slider
+    $('.slideshow').owlCarousel({
+        navigation : false,
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true,
+        autoPlay : true
+    });
+
 });
-			  				</code>
-			  			</pre>
+
+</code></pre>
 
             </section>
-            <section>
-                <h3>What Is All That Stuff?</h3>
-                <img src="img/confusedmonkey.jpg" alt="confused monkey" />
-            </section>
 
-            <section>
-                <h3>$</h3>
-                <p>$ is a shortcut for jQuery. The $ is made for selecting an element and then returning that element to perform an action on it.</p>
-                <img src="img/raincat.jpg" alt="make it rain cat" />
-            </section>
-            <section>
-                <h3>jQuery Selectors</h3>
-                <p>The following code selects the element that has the ID header in the HTML.</p>
-                <pre><code>
-$('#header');
-							</code></pre>
-                <img style="max-width: none;" src="img/selectors.png" alt="jQuery selector" />
-            </section>
-
-            <section>
-                <h3>Document Ready</h3>
-                <p>In order for jQuery to manipulate HTML, it needs to make sure that the HTML is fully loaded before running the jQuery.</p>
-                <p>So whenever you write jQuery, you'll need to wrap that code in a document.ready function, as shown below:</p>
-                <pre><code>
-$(document).ready(function(event){
-  // jQuery code goes in here
-});
-							</code></pre>
-            </section>
-            <section>
-                <h3>Comments</h3>
-                <p>Just like in HTML and CSS, comments are for developers and are not interpreted by the browser.</p>
-                <p>Your code has two sets of comments. They show the two different ways of formatting comments.</p>
-            </section>
-            <section>
-                <h3>Comments</h3>
-                <p>One is to surround the comment by /* on one side and */ on the other. These comments can be multiple lines long.</p>
-                <pre><code>
-/* This comment
-is three
-lines long. */
-						</code></pre>
-                <p>Two is to have // before the comment. This kind of comment can only be one line long.</p>
-                <pre>
-                <code>
-// This comment is only one line long.
-							</code>
-						</pre>
-            </section>
             <section>
                 <h3>jQuery Functions</h3>
                 <p>Funtions are a way of reusing code in JavaScript.</p>
-                <p>The .slick function lets you reuse all the slick code to create a slider.</p>
-                <img src="img/slickfunction.png" alt=".slick calls the slick function" />
+                <p>The .owlCarousel function lets you reuse all the owl carousel code to create a slider.</p>
+                <img src="img/slickfunction.png" alt=".owlCarousel calls the owl carousel function" />
             </section>
             <section>
                 <h3>jQuery Options</h3>
                 <p>jQuery plugins have <em>options</em> which allow you to customize the way the plugin works and displays on the page.</p>
                 <p>The plugin documentation explains what options there are and what values you can put in them. Sometimes the documentation refers to options as <em>settings</em>.</p>
-                <p><a href="http://kenwheeler.github.io/slick/#settings" target="_blank">Slick slider documentation on its options</a>.</p>
+                <p><a href="http://owlgraphic.com/owlcarousel/#customizing" target="_blank">Owl slider documentation on its options</a>.</p>
             </section>
             <section>
                 <h3>Enough Talk: Let's Code!</h3>
-                <p>Explore the slick slider options and update your slider.</p>
+                <p>Explore the Owl Slider options and update your slider.</p>
                 <img src="img/options.jpg" alt="I meant to behave but there were too many options" />
             </section>
             <section>

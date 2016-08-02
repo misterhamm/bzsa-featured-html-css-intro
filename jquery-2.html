@@ -153,8 +153,7 @@ $('button').click(function(event){
             <section>
                 <h3>Menu HTML</h3>
                 <p>Add the following HTML inside or below your header HTML:</p>
-                <pre>
-                <code>
+                <pre><code>
 &lt;nav id="menu"&gt;
     &lt;ul&gt;
         &lt;li&gt;
@@ -168,8 +167,10 @@ $('button').click(function(event){
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;
-                </code>
-                </pre>
+                </code></pre>
+                <p>
+                    The above code is the basic structure for most website menus. It utilizes the unordered list HTML and wraps it in a nav HTML5 tag.
+                </p>
             </section>
 
             <section>
@@ -194,6 +195,10 @@ $('button').click(function(event){
     padding-left: 35px;
     line-height: 65px;
 }</code></pre>
+<p>
+    Our above CSS does 2 main things. First, it takes away the 'list' formatting that comes with an unordered list HTML element. Then it takes the li's and 'floats'
+    them to the left (so they're all next to each other).
+</p>
             </section>
             <section>
                 <h3>Enough Talk: Let's Code!</h3>
@@ -231,6 +236,21 @@ $('button').click(function(event){
             </section>
 
             <section>
+                <h3>Adding a mobile meta  tag</h3>
+
+                <p>
+                    In your HTML head, preferably at the top, but it can go anywhere in your head section.
+                </p>
+                <p>We need this meta tag to optimize your website for mobile devices.</p>
+<pre><code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+</code></pre>
+            </section>
+
+
+
+            <section>
                 <h3>Adding mobile styles</h3>
                 <p>In your newly created mobile.css file, add the following css:</p>
 <pre><code>@media only screen and (max-width: 750px) {
@@ -265,6 +285,9 @@ $('button').click(function(event){
     text-align: right;
 }
 </code></pre>
+<p>
+    We're adding this CSS because we want the menu items to appear 'stacked' in our mobile view and not all right next to each other.
+</p>
             </section>
 
             <section>
@@ -292,6 +315,10 @@ $('button').click(function(event){
     &lt;img src="menu-icon-white.png" /&gt;
 &lt;/div&gt;
 							</code></pre>
+                            <p>
+                                The img tag here is your hamburger menu you downloaded. Then we wrap that in a div with a class of toggle-menu. We'll use that class
+                                in a minute to active our mobile menu.
+                            </p>
             </section>
 
             <section>
@@ -324,6 +351,10 @@ $('button').click(function(event){
     display: none;
 }
 </code></pre>
+<p>
+    <b>Desktop = </b>menu shows, hamburger menu icon hidden<br />
+    <b>Mobile = </b>menu hidden, hamburger menu icon shows
+</p>
             </section>
 
             <section>
@@ -340,7 +371,9 @@ $('.toggle-menu').click(function() {
     $('#menu').slideToggle();
 });
 </code></pre>
-
+<p>
+    The slideToggle command in jQuery is used to turn the display of an HTML element on and off. 
+</p>
             </section>
             <section>
                 <h3>Enough Talk: Let's Code!</h3>
